@@ -6,7 +6,7 @@
 |---|---|
 | Julia installation is straightforward, whether using precompiled binaries or compiling from source. | Juliaのインストールはいたって単純です。あらかじめコンパイルされたバイナリを使うかソースからコンパイルするかのいずれかの方法で行います。 |
 | Download and install Julia by following the instructions at https://julialang.org/downloads/. | ウェブサイト https://julialang.org/downloads/ に記載の指示に従い、Juliaのダウンロードとインストールを行ってください。|
-| The easiest way to learn and experiment with Julia is by starting an interactive session (also known as a read-eval-print loop or "REPL") by double-clicking the Julia executable or running `julia` from the command line: | Juliaを学習したり試しに動かしたりするのに最も簡単な方法は、Juliaの実行ファイルをダブルクリックするかコマンドライン上で`julia`を実行しインタラクティブセッション（読み込み・評価・出力[read-eval-print] ループや「REPL」としても知られている）を開始することです。次に例を示します。|
+| The easiest way to learn and experiment with Julia is by starting an interactive session (also known as a read-eval-print loop or "REPL") by double-clicking the Julia executable or running `julia` from the command line: | Juliaを学習したり試しに動かしたりするのに最も簡単な方法は、Juliaの実行ファイルをダブルクリックするかコマンドライン上で`julia`を実行しインタラクティブセッション（読み込み・評価・出力[read-eval-print] ループや「REPL」としても知られている）を開始することです:|
 
 ```julia
 $ julia
@@ -30,14 +30,16 @@ julia> ans
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| To exit the interactive session, type `CTRL-D` (press the Control/^ key together with the d key), or type `exit()`.  | インタラクティブセッションを終了するには、`Ctrl D`を打つ（コントロール`Crtl`キーと`d`キーを同時に押す）か、`exit()`を入力します。|
-| When run in interactive mode, julia displays a banner and prompts the user for input. | インタラクティブモードの場合、juliaはバナーとユーザが入力するためのプロンプトを表示します。|
-| Once the user has entered a complete expression, such as `1 + 2`, and hits enter, the interactive session evaluates the expression and shows its value. | ユーザが `1 + 2` のような完全な式を入力しエンターキーを押すと、インタラクティブセッションは式を評価し値を示します。|
-| If an expression is entered into an interactive session with a trailing semicolon, its value is not shown. | 末尾にセミコロンをつけた式をインタラクティブセッションに入力した場合はその値を示しません。|
-| The variable `ans` is bound to the value of the last evaluated expression whether it is shown or not. | 変数`ans`は、その値が示されているかどうかにかかわらず最後に評価された式の値に代入されます。|
-| The `ans` variable is only bound in interactive sessions, not when Julia code is run in other ways. | 変数`ans`はインタラクティブセッションでのみ代入され、Juliaのコードが他の手段で実行される場合には代入されません。|
+| To exit the interactive session, type `CTRL-D` (press the Control/`^` key together with the `d` key), or type `exit()`.  | インタラクティブセッションを終了するには、`Ctrl-D`とタイプする（コントロールキーと`d`キーを同時に押す）か、`exit()`をタイプします。|
+| When run in interactive mode, `julia` displays a banner and prompts the user for input. | インタラクティブモードの場合、`julia`はバナーとユーザが入力するためのプロンプトを表示します。|
+| Once the user has entered a complete expression, such as `1 + 2`, and hits enter, the interactive session evaluates the expression and shows its value. | ユーザが `1 + 2` のような完全形の式を入力しエンターキーを押すと、インタラクティブセッションは式を評価し値を示します。|
+| If an expression is entered into an interactive session with a trailing semicolon, its value is not shown. | 末尾にセミコロンをつけた式をインタラクティブセッションに入力した場合は式の値を示しません。|
+| The variable `ans` is bound to the value of the last evaluated expression whether it is shown or not. | 変数`ans`には、その値が示されているかどうかにかかわらず最後に評価された式の値が代入されます。|
+| The `ans` variable is only bound in interactive sessions, not when Julia code is run in other ways. | 変数`ans`にはインタラクティブセッションでのみ代入され、Juliaのコードが他の手段で実行される場合には代入されません。|
+| * | * |
 | To evaluate expressions written in a source file `file.jl`, write `include("file.jl")`. | ソースファイル`file.jl`に書かれた式を評価するには、`include("file.jl")`と書きます。|
-| To run code in a file non-interactively, you can give it as the first argument to the julia command: | ファイル内のコードを非対話型で実行する際、juliaコマンドの第一引数にファイルを指定することができます。|
+| * | * |
+| To run code in a file non-interactively, you can give it as the first argument to the `julia` command: | ファイル内のコードを非対話型で実行する際は、`julia`コマンドの第一引数にファイルを指定することができます。|
 
 ```julia
 $ julia script.jl arg1 arg2...
@@ -45,8 +47,7 @@ $ julia script.jl arg1 arg2...
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| As the example implies, the following command-line arguments to `julia` are interpreted as 
-command-line arguments to the program `script.jl`, passed in the global constant `ARGS`. | 上記の例が示すように、`julia`に続くコマンドライン引数は`script.jl`プログラムに対するコマンドライン引数として解釈され、グローバル定数`ARGS`に渡されます。|
+| As the example implies, the following command-line arguments to `julia` are interpreted as command-line arguments to the program `script.jl`, passed in the global constant `ARGS`. | 上記の例が示すように、`julia`に続くコマンドライン引数は`script.jl`プログラムに対するコマンドライン引数として解釈され、グローバル定数`ARGS`に渡されます。|
 | The name of the script itself is passed in as the global `PROGRAM_FILE`. | スクリプト自体の名前はグローバルな`PROGRAM_FILE`に引き継がれます。|
 | Note that `ARGS` is also set when a Julia expression is given using the `-e` option on the command line (see the `julia` help output below) but `PROGRAM_FILE` will be empty. | `ARGS`はまたjulia式が与えられたときコマンドライン上で`-e`オプションを使用して（`julia`ヘルプ参照）、`PROGRAM_FILE`は空っぽです。|
 | For example, to just print the arguments given to a script, you could do this: | 例えば、あるスクリプトに付与された引数を出力するには、こうすればいいのです: |
