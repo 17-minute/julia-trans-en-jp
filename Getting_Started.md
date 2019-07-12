@@ -4,9 +4,9 @@
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| Julia installation is straightforward, whether using precompiled binaries or compiling from source. | Juliaのインストールはいたって単純です。あらかじめコンパイルされたバイナリを使うかソースからコンパイルするかのいずれかの方法で行います。 |
-| Download and install Julia by following the instructions at https://julialang.org/downloads/. | ウェブサイト https://julialang.org/downloads/ に記載の指示に従い、Juliaのダウンロードとインストールを行ってください。|
-| The easiest way to learn and experiment with Julia is by starting an interactive session (also known as a read-eval-print loop or "REPL") by double-clicking the Julia executable or running `julia` from the command line: | Juliaを学習したり試しに動かしたりするのに最も簡単な方法は、Juliaの実行ファイルをダブルクリックするかコマンドライン上で`julia`を実行しインタラクティブセッション（読み込み・評価・出力[read-eval-print] ループや「REPL」としても知られている）を開始することです:|
+| Julia installation is straightforward, whether using precompiled binaries or compiling from source. | Juliaのインストールはいたって単純です。プリコンパイルされたバイナリを使うかソースからコンパイルするかのいずれかの方法で行います。 |
+| Download and install Julia by following the instructions at https://julialang.org/downloads/. | https://julialang.org/downloads/ に記載の指示に従い、Juliaのダウンロードとインストールを行ってください。|
+| The easiest way to learn and experiment with Julia is by starting an interactive session (also known as a read-eval-print loop or "REPL") by double-clicking the Julia executable or running `julia` from the command line: | Juliaを学習したり試しに動かしたりするのに最も簡単な方法は、Juliaの実行ファイルをダブルクリックするかコマンドライン上で`julia`を実行してインタラクティブセッション（読み込み・評価・出力[read-eval-print] ループや「REPL」としても知られている）を開始することです:|
 
 ```julia
 $ julia
@@ -30,7 +30,7 @@ julia> ans
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| To exit the interactive session, type `CTRL-D` (press the Control/`^` key together with the `d` key), or type `exit()`.  | インタラクティブセッションを終了するには、`Ctrl-D`とタイプする（コントロールキーと`d`キーを同時に押す）か、`exit()`をタイプします。|
+| To exit the interactive session, type `CTRL-D` (press the Control/`^` key together with the `d` key), or type `exit()`.  | インタラクティブセッションを終了するには、`Ctrl-D`とタイプする（コントロールキーか`^`キーと`d`キーを同時に押す）か、`exit()`をタイプします。|
 | When run in interactive mode, `julia` displays a banner and prompts the user for input. | インタラクティブモードの場合、`julia`はバナーとユーザが入力するためのプロンプトを表示します。|
 | Once the user has entered a complete expression, such as `1 + 2`, and hits enter, the interactive session evaluates the expression and shows its value. | ユーザが `1 + 2` のような完全形の式を入力しエンターキーを押すと、インタラクティブセッションは式を評価し値を示します。|
 | If an expression is entered into an interactive session with a trailing semicolon, its value is not shown. | 末尾にセミコロンをつけた式をインタラクティブセッションに入力した場合は式の値を示しません。|
@@ -48,8 +48,8 @@ $ julia script.jl arg1 arg2...
 | 原文（英語） | 訳文（日本語） |
 |---|---|
 | As the example implies, the following command-line arguments to `julia` are interpreted as command-line arguments to the program `script.jl`, passed in the global constant `ARGS`. | 上記の例が示すように、`julia`に続くコマンドライン引数は`script.jl`プログラムに対するコマンドライン引数として解釈され、グローバル定数`ARGS`に渡されます。|
-| The name of the script itself is passed in as the global `PROGRAM_FILE`. | スクリプト自体の名前はグローバルな`PROGRAM_FILE`に引き継がれます。|
-| Note that `ARGS` is also set when a Julia expression is given using the `-e` option on the command line (see the `julia` help output below) but `PROGRAM_FILE` will be empty. | `ARGS`はまたjulia式が与えられたときコマンドライン上で`-e`オプションを使用して（`julia`ヘルプ参照）、`PROGRAM_FILE`は空っぽです。|
+| The name of the script itself is passed in as the global `PROGRAM_FILE`. | スクリプト自体の名前はグローバル定数`PROGRAM_FILE`に引き継がれます。|
+| Note that `ARGS` is also set when a Julia expression is given using the `-e` option on the command line (see the `julia` help output below) but `PROGRAM_FILE` will be empty. | また、コマンドライン上で`-e`オプションを使用した（`julia`ヘルプ参照）juliaの式が与えられたときも`ARGS`の値が設定されますが、`PROGRAM_FILE`は値なしということに留意ください。|
 | For example, to just print the arguments given to a script, you could do this: | 例えば、あるスクリプトに付与された引数を出力するには、こうすればいいのです: |
 
 ```julia
@@ -61,7 +61,7 @@ bar
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| Or you could put that code into a script and run it: | そのコードをスクリプトにして実行することも可能です。|
+| Or you could put that code into a script and run it: | あるいは、そのコードをスクリプトにして実行することも可能です。|
 
 ```julia
 $ echo 'println(PROGRAM_FILE); for x in ARGS; println(x); end' > script.jl
@@ -72,7 +72,7 @@ bar
 ```
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| The`--`delimiter can be used to separate command-line arguments intended for the script file from arguments intended for Julia: | 区切り文字`--`はスクリプトのファイルのコマンドライン引数をJuliaの引数を分けるために使います。|
+| The`--`delimiter can be used to separate command-line arguments intended for the script file from arguments intended for Julia: | 区切り文字`--`はスクリプトファイルのコマンドライン引数とJuliaの引数を分けるために使います。|
 
 ```julia
 $ julia --color=yes -O -- foo.jl arg1 arg2..
@@ -80,15 +80,15 @@ $ julia --color=yes -O -- foo.jl arg1 arg2..
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| See also [Scripting](https://docs.julialang.org/en/v1/manual/faq/#man-scripting-1) for more information on writing Julia scripts. | Juliaのスクリプティングについてのさらなる情報は[スクリプティング](https://docs.julialang.org/en/v1/manual/faq/#man-scripting-1)（訳注：未翻訳）の項も参照してください。|
+| See also [Scripting](https://docs.julialang.org/en/v1/manual/faq/#man-scripting-1) for more information on writing Julia scripts. | Juliaのスクリプティングについての詳細は[スクリプティング](https://docs.julialang.org/en/v1/manual/faq/#man-scripting-1)（訳注：未翻訳）の項も参照してください。|
 | Julia can be started in parallel mode with either the -p or the `--machine-file` options. | `-p`か`--machine-file file`のいずれかのオプションを使用することでJuliaをパラレルモードで起動することができます。|
-| `-p n` will launch an additional n worker processes, while`--machine-file file` will launch a worker for each line in file `file`. | `-p n`は追加のワーカプロセスを実行します。一方、`--machine-file file`は`file`ファイルないの各行のワーカを実行します。|
-| The machines defined in `file` must be accessible via a password-less `ssh` login, with Julia installed at the same location as the current host. | ファイル内で定義されたマシンにはパスワードなしの<ssh>ログインを経由してアクセスできるようにする必要があります。 |
-| Each machine definition takes the form `[count*] [user@]host[:port] [bind_addr[:port]]`. | それぞれのマシンの定義は`[count*][user@]host[:port][bind_addr[:port]]`の形をとります。 |
-| `user` defaults to current user, `port` to the standard ssh port. | `user`のデフォルトはカレントユーザ、`port`は標準sshポートです。|
-| `count` is the number of workers to spawn on the node, and defaults to 1. | `count`はノードにspawnするためのワーカの数で、デフォルトは1です。|
+| `-p n` will launch an additional n worker processes, while`--machine-file file` will launch a worker for each line in file `file`. | `-p n`は追加のワーカプロセスを実行します。一方、`--machine-file file`は`file`ファイル内の各行のワーカを実行します。|
+| The machines defined in `file` must be accessible via a password-less `ssh` login, with Julia installed at the same location as the current host. | ファイル内で定義されたマシンには、Juliaを現在のホストと同じ場所にインストールした状態で、パスワードのない`ssh`ログインを経由してアクセスできるようにする必要があります。 |
+| Each machine definition takes the form `[count*] [user@]host[:port] [bind_addr[:port]]`. | それぞれのマシンの定義は`[count*] [user@]host[:port] [bind_addr[:port]]`の形をとります。 |
+| `user` defaults to current user, `port` to the standard ssh port. | `user`のデフォルトは現在のユーザ、`port`は標準sshポートです。|
+| `count` is the number of workers to spawn on the node, and defaults to 1. | `count`はノードにスポーンするワーカの数で、デフォルトは1です。|
 | The optional bind-to bind_addr[:port] specifies the IP address and port that other workers should use to connect to this worker. | 任意の`bind-to bind_addr[:port]`では、他のワーカがこのワーカに接続するために使用する必要のあるIPアドレスとポートを指定します。|
-| If you have code that you want executed whenever Julia is run, | you can put it in ~/.julia/config/startup.jl: | Juliaを動かすたびに実行したいコードがある場合、そこに`~/.julia/config/startup.jl`を指定します。|
+| If you have code that you want executed whenever Julia is run, you can put it in ~/.julia/config/startup.jl: | Juliaを動かすたびに実行したいコードがある場合、そこに`~/.julia/config/startup.jl`を指定します。|
 
 ```julia
 $ echo 'println("Greetings! 你好! 안녕하세요?")' > ~/.julia/config/startup.jl
