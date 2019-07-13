@@ -61,7 +61,7 @@ bar
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| Or you could put that code into a script and run it: | あるいは、そのコードをスクリプトにして実行することも可能です。|
+| Or you could put that code into a script and run it: | あるいは、そのコードをスクリプトにして実行します。|
 
 ```julia
 $ echo 'println(PROGRAM_FILE); for x in ARGS; println(x); end' > script.jl
@@ -99,7 +99,7 @@ Greetings! 你好! 안녕하세요?
 ```
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| There are various ways to run Julia code and provide options, similar to those available for the perl and ruby programs: | Juliaコードを実行しオプションを提供する様々な方法がありますが、それはperlやrubyのプログラムでもその方法を利用できるのに似ています。|
+| There are various ways to run Julia code and provide options, similar to those available for the perl and ruby programs: | Juliaコードを実行したり、オプションを提供したりするには様々な方法がありますが、それはperlやrubyのプログラムでもその方法を利用できるのに似ています。|
 
 ```julia
 julia [switches] -- [programfile] [args...]
