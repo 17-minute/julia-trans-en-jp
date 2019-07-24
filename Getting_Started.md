@@ -112,7 +112,7 @@ julia [switches] -- [programfile] [args...]
 | `-h`, `--help` | Print this message <br> このメッセージを出力 |
 | `--project[={<dir>\|@.}]` | Set `<dir>` as the home project/environment. The default `@.` option will search through parent directories until a `Project.toml` or `JuliaProject.toml` file is found. <br> `<dir>`をホームのプロジェクトおよび環境に設定。デフォルトの `@.` オプションを使うと`Project.toml`か`JuliaProject.toml`ファイルが見つかるまで親フォルダに遡って検索。|
 | `-J`, `--sysimage <file>`	| Start up with the given system image file <br> システムイメージファイルを使用して起動 |
-| `-H`, `--home <dir>` | Set location of julia executable <br> julia executableの位置を設定 |
+| `-H`, `--home <dir>` | Set location of julia executable <br> juliaの実行ファイルの位置を設定 |
 | `--startup-file={yes\|no}` | Load `~/.julia/config/startup.jl` <br> ~/.julia/config/startup.jlのロード |
 | `--handle-signals={yes\|no}` | Enable or disable Julia's default signal handlers <br> Juliaのデフォルトのシグナルハンドラを有効/無効に設定|
 | `--sysimage-native-code={yes\|no}`	| Use native code from system image if available <br> システム画像からのネイティブコードを使用（利用可能な場合）|
