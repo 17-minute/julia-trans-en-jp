@@ -149,7 +149,7 @@ julia [switches] -- [programfile] [args...]
 ## Resources / リソース
 | 原文（英語） | 訳文（日本語） |
 |---|---|
-| A curated list of useful learning resources to help new users get started can be found on the learning page of the main Julia web site. | 新規ユーザが始める助けとなるような役に立つラーニングリソースのcuratedリストがメインのJuliaウェブサイト上の[learning](https://julialang.org/learning/)（訳注：未翻訳）にあります。|
+| A curated list of useful learning resources to help new users get started can be found on the learning page of the main Julia web site. | 新規ユーザが始める助けとなるような役に立つラーニングリソースのコンテンツをまとめたリストがメインのJuliaウェブサイト上の[learning](https://julialang.org/learning/)（訳注：未翻訳）にあります。|
 
 | 原文（英語） | 訳文（日本語） |
 |---|---|
